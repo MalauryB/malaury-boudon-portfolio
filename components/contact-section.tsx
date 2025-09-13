@@ -7,7 +7,8 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { Github, Linkedin, Mail, MapPin, Phone } from "lucide-react"
+import { Github, Linkedin, Mail, MapPin, Phone, CheckCircle, XCircle } from "lucide-react"
+import { sendEmail, type EmailData } from "@/lib/emailjs"
 
 export function ContactSection() {
   const [formData, setFormData] = useState({
@@ -15,21 +16,44 @@ export function ContactSection() {
     email: "",
     message: "",
   })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<{
+    type: 'success' | 'error' | null;
+    message: string;
+  }>({ type: null, message: '' })
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    setIsSubmitting(true)
+    setSubmitStatus({ type: null, message: '' })
 
-    // Create mailto URL with form data
-    const subject = encodeURIComponent("Contact depuis malaury.dev")
-    const body = encodeURIComponent(
-      `Bonjour Malaury,\n\nNom: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}\n\n--\nCe message a été envoyé depuis votre portfolio malaury.dev`
-    )
+    try {
+      const result = await sendEmail(formData as EmailData)
 
-    // Open Gmail with pre-filled data
-    window.open(`mailto:boudonmalaury@gmail.com?subject=${subject}&body=${body}`, "_blank")
-
-    // Reset form
-    setFormData({ name: "", email: "", message: "" })
+      if (result.success) {
+        setSubmitStatus({
+          type: 'success',
+          message: 'Message envoyé avec succès! Je vous répondrai bientôt.'
+        })
+        setFormData({ name: "", email: "", message: "" })
+      } else {
+        setSubmitStatus({
+          type: 'error',
+          message: result.message
+        })
+      }
+    } catch (error) {
+      setSubmitStatus({
+        type: 'error',
+        message: 'Une erreur est survenue. Veuillez réessayer.'
+      })
+    } finally {
+      setIsSubmitting(false)
+      // Masquer le message après 5 secondes
+      setTimeout(() => {
+        setSubmitStatus({ type: null, message: '' })
+      }, 5000)
+    }
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -164,8 +188,28 @@ export function ContactSection() {
                   />
                 </div>
 
-                <Button type="submit" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-3">
-                  Envoyer le message
+                {/* Status message */}
+                {submitStatus.type && (
+                  <div className={`flex items-center gap-2 p-3 rounded-lg ${
+                    submitStatus.type === 'success'
+                      ? 'bg-green-100 text-green-800 border border-green-200'
+                      : 'bg-red-100 text-red-800 border border-red-200'
+                  }`}>
+                    {submitStatus.type === 'success' ? (
+                      <CheckCircle className="h-5 w-5" />
+                    ) : (
+                      <XCircle className="h-5 w-5" />
+                    )}
+                    <p className="text-sm">{submitStatus.message}</p>
+                  </div>
+                )}
+
+                <Button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-3 disabled:opacity-50"
+                >
+                  {isSubmitting ? 'Envoi en cours...' : 'Envoyer le message'}
                 </Button>
               </form>
             </CardContent>
