@@ -1,6 +1,6 @@
 import { memo } from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowDown, Github, Linkedin, Mail, Download } from "lucide-react";
+import { ArrowDown, Github, Linkedin, Download } from "lucide-react";
 import Image from "next/image";
 import { HeroContainerProps } from "@/components/containers/interfaces";
 
@@ -9,7 +9,6 @@ export const HeroView = memo(function HeroView({
   onDownloadCV,
   onGitHubClick,
   onLinkedInClick,
-  onEmailClick,
   translations
 }: HeroContainerProps) {
   return (
@@ -92,9 +91,6 @@ export const HeroView = memo(function HeroView({
                   </Button>
                   <Button variant="ghost" size="icon" className="text-muted-foreground hover:text-primary" onClick={onLinkedInClick}>
                     <Linkedin className="h-5 w-5" />
-                  </Button>
-                  <Button variant="ghost" size="icon" className="text-muted-foreground hover:text-primary" onClick={onEmailClick}>
-                    <Mail className="h-5 w-5" />
                   </Button>
                 </div>
               </div>

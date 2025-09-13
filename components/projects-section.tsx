@@ -1,9 +1,7 @@
 "use client"
 
 import { Card, CardContent } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { ExternalLink, Github } from "lucide-react"
 
 const projects = [
   {
@@ -89,14 +87,6 @@ export function ProjectsSection() {
                   className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="absolute bottom-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <Button size="icon" variant="secondary" className="h-8 w-8">
-                    <ExternalLink className="h-4 w-4" />
-                  </Button>
-                  <Button size="icon" variant="secondary" className="h-8 w-8">
-                    <Github className="h-4 w-4" />
-                  </Button>
-                </div>
               </div>
 
               <CardContent className="p-6">

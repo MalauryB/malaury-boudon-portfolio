@@ -109,14 +109,6 @@ export function ContactSection() {
                 >
                   <Linkedin className="h-5 w-5" />
                 </Button>
-                <Button
-                  variant="outline"
-                  size="icon"
-                  className="hover:bg-primary hover:text-primary-foreground bg-transparent"
-                  onClick={() => window.open("mailto:boudonmalaury@gmail.com?subject=Contact depuis malaury.dev&body=Bonjour Malaury,%0D%0A%0D%0AJe vous contacte depuis votre portfolio malaury.dev.%0D%0A%0D%0A", "_blank")}
-                >
-                  <Mail className="h-5 w-5" />
-                </Button>
               </div>
             </div>
           </div>
