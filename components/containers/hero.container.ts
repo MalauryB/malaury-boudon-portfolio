@@ -17,7 +17,7 @@ export function useHeroContainer(): HeroContainerProps {
   const onDownloadCV = () => downloadFile("/CV_malaury_boudon.pdf", "CV_malaury_boudon.pdf");
   const onGitHubClick = () => window.open("https://github.com/MalauryB", "_blank");
   const onLinkedInClick = () => window.open("https://www.linkedin.com/in/malaury-boudon-a9538a12b/", "_blank");
-  const onEmailClick = () => window.open("mailto:contact@example.com", "_blank");
+  const onEmailClick = () => window.open("mailto:boudonmalaury@gmail.com?subject=Contact depuis malaury.dev&body=Bonjour Malaury,%0D%0A%0D%0AJe vous contacte depuis votre portfolio malaury.dev.%0D%0A%0D%0A", "_blank");
 
   return {
     onScrollToProjects,

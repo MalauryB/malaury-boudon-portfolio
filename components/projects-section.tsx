@@ -11,7 +11,7 @@ const projects = [
     title: "CTS - Projet Web et Mobile",
     description:
       "Développement complet d'une solution web et mobile avec gestion de projet Agile/Scrum. Programmation en Java et Angular pour le web, développement natif Android et solutions cross-platform avec Flutter.",
-    image: "/modern-ecommerce-dashboard.png",
+    image: "/tranmway_strasbourg.jpg",
     technologies: ["Java", "Angular", "Android", "Kotlin", "Flutter", "Jira"],
     liveUrl: "#",
     githubUrl: "#",
@@ -22,7 +22,7 @@ const projects = [
     title: "Sentinel MBO - Projet Web Complet",
     description:
       "Projet full-stack avec gestion Agile/Scrum, rédaction de spécifications fonctionnelles et techniques. Développement avec React.js, Java et PostgreSQL, mise en production sous Linux.",
-    image: "/task-management-interface.png",
+    image: "/sentinel.jpg",
     technologies: ["Java", "React.js", "PostgreSQL", "Linux", "Figma"],
     liveUrl: "#",
     githubUrl: "#",
@@ -33,7 +33,7 @@ const projects = [
     title: "Roiret - Interface Utilisateur",
     description:
       "Intégration front-end avec développement de l'interface utilisateur en React.js à partir de maquettes Figma. Optimisation des performances et adaptation responsive multi-appareils.",
-    image: "/ai-content-generation-interface.jpg",
+    image: "/bordeaux.jpg",
     technologies: ["React.js", "HTML", "SCSS", "JavaScript", "Figma"],
     liveUrl: "#",
     githubUrl: "#",
@@ -44,7 +44,7 @@ const projects = [
     title: "Microservices Assurance - ADIS",
     description:
       "Développement et maintenance de microservices Java dans le secteur de l'assurance avec prise en compte des contraintes métier et réglementaires. Architecture API REST et intégration CI/CD.",
-    image: "/analytics-dashboard-charts.png",
+    image: "/assurance.jpg",
     technologies: ["Java", "Spring Boot", "MongoDB", "API REST", "CI/CD"],
     liveUrl: "#",
     githubUrl: "#",
@@ -125,11 +125,6 @@ export function ProjectsSection() {
           ))}
         </div>
 
-        <div className="text-center mt-12">
-          <Button variant="outline" className="px-8 py-3 bg-transparent">
-            Voir tous les projets
-          </Button>
-        </div>
       </div>
     </section>
   )

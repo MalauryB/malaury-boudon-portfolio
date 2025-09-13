@@ -49,7 +49,7 @@ export const HeroView = memo(function HeroView({
           {/* Right side - Content */}
           <div className="order-1 lg:order-2 text-center lg:text-left">
             <div className="space-y-6">
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-balance leading-tight overflow-hidden">
+              <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-balance leading-tight">
                 <span className="text-foreground">{translations.creative}</span>
                 <br />
                 <span className="text-muted-foreground">{translations.developer}</span>

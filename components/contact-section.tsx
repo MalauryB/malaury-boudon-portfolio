@@ -18,8 +18,18 @@ export function ContactSection() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission
-    console.log("Form submitted:", formData)
+
+    // Create mailto URL with form data
+    const subject = encodeURIComponent("Contact depuis malaury.dev")
+    const body = encodeURIComponent(
+      `Bonjour Malaury,\n\nNom: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}\n\n--\nCe message a été envoyé depuis votre portfolio malaury.dev`
+    )
+
+    // Open Gmail with pre-filled data
+    window.open(`mailto:boudonmalaury@gmail.com?subject=${subject}&body=${body}`, "_blank")
+
+    // Reset form
+    setFormData({ name: "", email: "", message: "" })
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -87,6 +97,7 @@ export function ContactSection() {
                   variant="outline"
                   size="icon"
                   className="hover:bg-primary hover:text-primary-foreground bg-transparent"
+                  onClick={() => window.open("https://github.com/MalauryB", "_blank")}
                 >
                   <Github className="h-5 w-5" />
                 </Button>
@@ -94,6 +105,7 @@ export function ContactSection() {
                   variant="outline"
                   size="icon"
                   className="hover:bg-primary hover:text-primary-foreground bg-transparent"
+                  onClick={() => window.open("https://www.linkedin.com/in/malaury-boudon-a9538a12b/", "_blank")}
                 >
                   <Linkedin className="h-5 w-5" />
                 </Button>
@@ -101,6 +113,7 @@ export function ContactSection() {
                   variant="outline"
                   size="icon"
                   className="hover:bg-primary hover:text-primary-foreground bg-transparent"
+                  onClick={() => window.open("mailto:boudonmalaury@gmail.com?subject=Contact depuis malaury.dev&body=Bonjour Malaury,%0D%0A%0D%0AJe vous contacte depuis votre portfolio malaury.dev.%0D%0A%0D%0A", "_blank")}
                 >
                   <Mail className="h-5 w-5" />
                 </Button>
