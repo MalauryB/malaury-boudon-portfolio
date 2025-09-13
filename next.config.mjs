@@ -11,7 +11,8 @@ const nextConfig = {
   },
   output: 'export',
   trailingSlash: true,
-  basePath: process.env.NODE_ENV === 'production' ? '' : '',
+  basePath: process.env.NODE_ENV === 'production' ? '/malaury-boudon-portfolio' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/malaury-boudon-portfolio' : '',
 }
 
 export default nextConfig
