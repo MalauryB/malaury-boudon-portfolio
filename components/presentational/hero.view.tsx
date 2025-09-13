@@ -7,6 +7,9 @@ import { HeroContainerProps } from "@/components/containers/interfaces";
 export const HeroView = memo(function HeroView({
   onScrollToProjects,
   onDownloadCV,
+  onGitHubClick,
+  onLinkedInClick,
+  onEmailClick,
   translations
 }: HeroContainerProps) {
   return (
@@ -46,7 +49,7 @@ export const HeroView = memo(function HeroView({
           {/* Right side - Content */}
           <div className="order-1 lg:order-2 text-center lg:text-left">
             <div className="space-y-6">
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-balance">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-balance leading-tight overflow-hidden">
                 <span className="text-foreground">{translations.creative}</span>
                 <br />
                 <span className="text-muted-foreground">{translations.developer}</span>
@@ -84,13 +87,13 @@ export const HeroView = memo(function HeroView({
                 </Button>
 
                 <div className="flex items-center gap-4">
-                  <Button variant="ghost" size="icon" className="text-muted-foreground hover:text-primary">
+                  <Button variant="ghost" size="icon" className="text-muted-foreground hover:text-primary" onClick={onGitHubClick}>
                     <Github className="h-5 w-5" />
                   </Button>
-                  <Button variant="ghost" size="icon" className="text-muted-foreground hover:text-primary">
+                  <Button variant="ghost" size="icon" className="text-muted-foreground hover:text-primary" onClick={onLinkedInClick}>
                     <Linkedin className="h-5 w-5" />
                   </Button>
-                  <Button variant="ghost" size="icon" className="text-muted-foreground hover:text-primary">
+                  <Button variant="ghost" size="icon" className="text-muted-foreground hover:text-primary" onClick={onEmailClick}>
                     <Mail className="h-5 w-5" />
                   </Button>
                 </div>

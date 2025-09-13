@@ -14,11 +14,17 @@ export function useHeroContainer(): HeroContainerProps {
   const { downloadFile } = useFileDownload(fileDownloadService);
 
   const onScrollToProjects = () => scrollToSection("projects");
-  const onDownloadCV = () => downloadFile("/cv-malaury-boudon.pdf", "CV-Malaury-Boudon.pdf");
+  const onDownloadCV = () => downloadFile("/CV_malaury_boudon.pdf", "CV_malaury_boudon.pdf");
+  const onGitHubClick = () => window.open("https://github.com/MalauryB", "_blank");
+  const onLinkedInClick = () => window.open("https://www.linkedin.com/in/malaury-boudon-a9538a12b/", "_blank");
+  const onEmailClick = () => window.open("mailto:contact@example.com", "_blank");
 
   return {
     onScrollToProjects,
     onDownloadCV,
+    onGitHubClick,
+    onLinkedInClick,
+    onEmailClick,
     translations: {
       creative: t("hero.creative"),
       developer: t("hero.developer"),

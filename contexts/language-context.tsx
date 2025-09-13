@@ -20,8 +20,8 @@ const translations = {
     "nav.contact": "CONTACT",
 
     // Hero Section
-    "hero.creative": "CRÉATIVE",
-    "hero.developer": "DÉVELOPPEUSE",
+    "hero.creative": "DÉVELOPPEUSE",
+    "hero.developer": "CRÉATIVE",
     "hero.name": "Malaury Boudon / Développeuse Full Stack",
     "hero.tagline": "SOLUTIONS WEB ÉVOLUTIVES",
     "hero.description":

@@ -45,7 +45,7 @@ export const AboutView = memo(function AboutView({
                 </div>
                 <h3 className="text-xl font-semibold text-foreground">{translations.languages}</h3>
               </div>
-              <div className="space-y-2">
+              <div className="flex flex-wrap gap-2">
                 <Badge variant="secondary">{translations.french}</Badge>
                 <Badge variant="secondary">{translations.english}</Badge>
               </div>
@@ -61,7 +61,7 @@ export const AboutView = memo(function AboutView({
                 </div>
                 <h3 className="text-xl font-semibold text-foreground">{translations.interests}</h3>
               </div>
-              <div className="space-y-2">
+              <div className="flex flex-wrap gap-2">
                 <Badge variant="secondary">{translations.philosophy}</Badge>
                 <Badge variant="secondary">{translations.ai}</Badge>
               </div>

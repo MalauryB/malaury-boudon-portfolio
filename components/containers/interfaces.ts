@@ -1,6 +1,9 @@
 export interface HeroContainerProps {
   onScrollToProjects: () => void;
   onDownloadCV: () => void;
+  onGitHubClick: () => void;
+  onLinkedInClick: () => void;
+  onEmailClick: () => void;
   translations: {
     creative: string;
     developer: string;
