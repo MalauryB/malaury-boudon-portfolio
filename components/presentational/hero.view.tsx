@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowDown, Github, Linkedin, Download } from "lucide-react";
 import Image from "next/image";
 import { HeroContainerProps } from "@/components/containers/interfaces";
+import { getAssetPath } from "@/lib/assets";
 
 export const HeroView = memo(function HeroView({
   onScrollToProjects,
@@ -30,7 +31,7 @@ export const HeroView = memo(function HeroView({
             <div className="relative">
               <div className="relative w-80 h-80 rounded-2xl overflow-hidden border-2 border-primary/20 shadow-2xl">
                 <Image
-                  src="/malaury-profile.jpg"
+                  src={getAssetPath("/malaury-profile.jpg")}
                   alt="Malaury Boudon - Développeuse Full Stack"
                   fill
                   className="object-cover"

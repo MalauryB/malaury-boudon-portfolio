@@ -2,6 +2,7 @@
 
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import { getAssetPath } from "@/lib/assets"
 
 const projects = [
   {
@@ -9,7 +10,7 @@ const projects = [
     title: "CTS - Projet Web et Mobile",
     description:
       "Développement complet d'une solution web et mobile avec gestion de projet Agile/Scrum. Programmation en Java et Angular pour le web, développement natif Android et solutions cross-platform avec Flutter.",
-    image: "/tranmway_strasbourg.jpg",
+    image: getAssetPath("/tranmway_strasbourg.jpg"),
     technologies: ["Java", "Angular", "Android", "Kotlin", "Flutter", "Jira"],
     liveUrl: "#",
     githubUrl: "#",
@@ -20,7 +21,7 @@ const projects = [
     title: "Sentinel MBO - Projet Web Complet",
     description:
       "Projet full-stack avec gestion Agile/Scrum, rédaction de spécifications fonctionnelles et techniques. Développement avec React.js, Java et PostgreSQL, mise en production sous Linux.",
-    image: "/sentinel.jpg",
+    image: getAssetPath("/sentinel.jpg"),
     technologies: ["Java", "React.js", "PostgreSQL", "Linux", "Figma"],
     liveUrl: "#",
     githubUrl: "#",
@@ -31,7 +32,7 @@ const projects = [
     title: "Roiret - Interface Utilisateur",
     description:
       "Intégration front-end avec développement de l'interface utilisateur en React.js à partir de maquettes Figma. Optimisation des performances et adaptation responsive multi-appareils.",
-    image: "/bordeaux.jpg",
+    image: getAssetPath("/bordeaux.jpg"),
     technologies: ["React.js", "HTML", "SCSS", "JavaScript", "Figma"],
     liveUrl: "#",
     githubUrl: "#",
@@ -42,7 +43,7 @@ const projects = [
     title: "Microservices Assurance - ADIS",
     description:
       "Développement et maintenance de microservices Java dans le secteur de l'assurance avec prise en compte des contraintes métier et réglementaires. Architecture API REST et intégration CI/CD.",
-    image: "/assurance.jpg",
+    image: getAssetPath("/assurance.jpg"),
     technologies: ["Java", "Spring Boot", "MongoDB", "API REST", "CI/CD"],
     liveUrl: "#",
     githubUrl: "#",
@@ -53,7 +54,7 @@ const projects = [
     title: "Agrégateur Boulanger",
     description:
       "Développement d'API REST dans le secteur de la grande distribution avec encadrement technique de 3 développeurs. Comparaison de systèmes d'information et migration réussie dans un délai réduit.",
-    image: "/api-rest-grande-distribution.jpg",
+    image: getAssetPath("/api-rest-grande-distribution.jpg"),
     technologies: ["Java", "Spring Boot", "API REST", "Encadrement", "Migration"],
     liveUrl: "#",
     githubUrl: "#",
