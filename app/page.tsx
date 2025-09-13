@@ -1,19 +1,19 @@
+"use client"
+
+import { useMemo } from "react"
 import { Navigation } from "@/components/navigation"
-import { HeroSection } from "@/components/hero-section"
-import { AboutSection } from "@/components/about-section"
-import { ExperienceSection } from "@/components/experience-section"
-import { ProjectsSection } from "@/components/projects-section"
-import { ContactSection } from "@/components/contact-section"
+import { SectionFactory } from "@/services"
 
 export default function Home() {
+  const sectionFactory = useMemo(() => new SectionFactory(), [])
+  const sections = sectionFactory.createSections()
+
   return (
     <main className="min-h-screen bg-background">
       <Navigation />
-      <HeroSection />
-      <AboutSection />
-      <ExperienceSection />
-      <ProjectsSection />
-      <ContactSection />
+      {sections.map(({ id, component: Component }) => (
+        <Component key={id} />
+      ))}
 
       {/* Footer */}
       <footer className="border-t border-border py-8 px-6">
