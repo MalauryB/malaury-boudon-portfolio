@@ -1,5 +1,6 @@
 "use client"
 
+import { useState } from "react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 
@@ -85,6 +86,18 @@ const projects = [
 ]
 
 export function ProjectsSection() {
+  const [selectedTech, setSelectedTech] = useState<string>("Tous")
+
+  // Extraire toutes les technologies uniques
+  const allTechnologies = Array.from(
+    new Set(projects.flatMap(project => project.technologies))
+  ).sort()
+
+  // Filtrer les projets selon la technologie sélectionnée
+  const filteredProjects = selectedTech === "Tous"
+    ? projects
+    : projects.filter(project => project.technologies.includes(selectedTech))
+
   return (
     <section id="projects" className="py-20 px-6">
       <div className="max-w-7xl mx-auto">
@@ -95,8 +108,41 @@ export function ProjectsSection() {
           </p>
         </div>
 
+        {/* Filtres par technologies */}
+        <div className="mb-12">
+          <h3 className="text-lg font-semibold text-foreground mb-4 text-center">Filtrer par technologie</h3>
+          <div className="flex flex-wrap justify-center gap-2">
+            <button
+              onClick={() => setSelectedTech("Tous")}
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
+                selectedTech === "Tous"
+                  ? "bg-primary text-primary-foreground shadow-md"
+                  : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
+              }`}
+            >
+              Tous ({projects.length})
+            </button>
+            {allTechnologies.map((tech) => {
+              const count = projects.filter(project => project.technologies.includes(tech)).length
+              return (
+                <button
+                  key={tech}
+                  onClick={() => setSelectedTech(tech)}
+                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
+                    selectedTech === tech
+                      ? "bg-primary text-primary-foreground shadow-md"
+                      : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
+                  }`}
+                >
+                  {tech} ({count})
+                </button>
+              )
+            })}
+          </div>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {projects.map((project) => {
+          {filteredProjects.map((project) => {
             const CardWrapper = project.liveUrl && project.liveUrl !== "#" ? "a" : "div";
             const cardProps = project.liveUrl && project.liveUrl !== "#"
               ? { href: project.liveUrl, target: "_blank", rel: "noopener noreferrer" }
