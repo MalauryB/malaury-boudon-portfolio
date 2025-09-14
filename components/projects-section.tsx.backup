@@ -3,13 +3,13 @@
 import { useState } from "react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { useLanguage } from "@/contexts/language-context"
 
-const projectsData = [
+const projects = [
   {
     id: 1,
-    titleKey: "projects.cts.title",
-    descKey: "projects.cts.desc",
+    title: "CTS - Projet Web et Mobile",
+    description:
+      "Développement complet d'une solution web et mobile avec gestion de projet Agile/Scrum. Programmation en Java et Angular pour le web, développement natif Android et solutions cross-platform avec Flutter.",
     image: "/tranmway_strasbourg.jpg",
     technologies: ["Java", "Angular", "Android", "Kotlin", "Flutter", "Jira"],
     liveUrl: "#",
@@ -18,8 +18,9 @@ const projectsData = [
   },
   {
     id: 2,
-    titleKey: "projects.sentinel.title",
-    descKey: "projects.sentinel.desc",
+    title: "Sentinel MBO - Projet Web Complet",
+    description:
+      "Projet full-stack avec gestion Agile/Scrum, rédaction de spécifications fonctionnelles et techniques. Développement avec React.js, Java et PostgreSQL, mise en production sous Linux.",
     image: "/sentinel.jpg",
     technologies: ["Java", "React.js", "PostgreSQL", "Linux", "Figma"],
     liveUrl: "#",
@@ -28,8 +29,9 @@ const projectsData = [
   },
   {
     id: 3,
-    titleKey: "projects.roiret.title",
-    descKey: "projects.roiret.desc",
+    title: "Roiret - Interface Utilisateur",
+    description:
+      "Intégration front-end avec développement de l'interface utilisateur en React.js à partir de maquettes Figma. Optimisation des performances et adaptation responsive multi-appareils.",
     image: "/bordeaux.jpg",
     technologies: ["React.js", "HTML", "SCSS", "JavaScript", "Figma"],
     liveUrl: "#",
@@ -38,8 +40,9 @@ const projectsData = [
   },
   {
     id: 4,
-    titleKey: "projects.adis.title",
-    descKey: "projects.adis.desc",
+    title: "Microservices Assurance - ADIS",
+    description:
+      "Développement et maintenance de microservices Java dans le secteur de l'assurance avec prise en compte des contraintes métier et réglementaires. Architecture API REST et intégration CI/CD.",
     image: "/assurance.jpg",
     technologies: ["Java", "Spring Boot", "MongoDB", "API REST", "CI/CD"],
     liveUrl: "#",
@@ -48,8 +51,9 @@ const projectsData = [
   },
   {
     id: 5,
-    titleKey: "projects.boulanger.title",
-    descKey: "projects.boulanger.desc",
+    title: "Agrégateur Boulanger",
+    description:
+      "Développement d'API REST dans le secteur de la grande distribution avec encadrement technique de 3 développeurs. Comparaison de systèmes d'information et migration réussie dans un délai réduit.",
     image: "/api-rest-grande-distribution.jpg",
     technologies: ["Java", "Spring Boot", "API REST", "Encadrement", "Migration"],
     liveUrl: "#",
@@ -58,8 +62,9 @@ const projectsData = [
   },
   {
     id: 6,
-    titleKey: "projects.wewioo.title",
-    descKey: "projects.wewioo.desc",
+    title: "Wewioo - Détection d'Incendie",
+    description:
+      "Projet React développé pour une startup innovante spécialisée dans la détection précoce d'incendies. Interface utilisateur moderne pour la surveillance et l'alerte en temps réel, contribuant à améliorer la sécurité et la prévention des risques d'incendie.",
     image: "/pompier.jpg",
     technologies: ["React", "JavaScript", "CSS", "Startup", "Sécurité"],
     liveUrl: "#",
@@ -68,8 +73,9 @@ const projectsData = [
   },
   {
     id: 7,
-    titleKey: "projects.therapist.title",
-    descKey: "projects.therapist.desc",
+    title: "Site Web Thérapeute - Strasbourg",
+    description:
+      "Projet personnel - Développement complet d'un site web pour un thérapeute à Strasbourg. Site vitrine moderne avec présentation des services, prise de rendez-vous et informations pratiques. Réalisé de manière indépendante.",
     image: "/famile.PNG",
     technologies: ["React", "JavaScript", "CSS", "Projet Personnel", "Site Vitrine"],
     liveUrl: "https://laure-conseil.fr",
@@ -80,23 +86,15 @@ const projectsData = [
 ]
 
 export function ProjectsSection() {
-  const { t } = useLanguage()
-  const [selectedTech, setSelectedTech] = useState<string>(t("projects.all"))
-
-  // Créer les projets avec les traductions
-  const projects = projectsData.map(project => ({
-    ...project,
-    title: t(project.titleKey),
-    description: t(project.descKey)
-  }))
+  const [selectedTech, setSelectedTech] = useState<string>("Tous")
 
   // Extraire toutes les technologies uniques
   const allTechnologies = Array.from(
-    new Set(projectsData.flatMap(project => project.technologies))
+    new Set(projects.flatMap(project => project.technologies))
   ).sort()
 
   // Filtrer les projets selon la technologie sélectionnée
-  const filteredProjects = selectedTech === t("projects.all")
+  const filteredProjects = selectedTech === "Tous"
     ? projects
     : projects.filter(project => project.technologies.includes(selectedTech))
 
@@ -104,28 +102,28 @@ export function ProjectsSection() {
     <section id="projects" className="py-20 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-4">{t("projects.title")}</h2>
+          <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-4">PROJETS</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            {t("projects.subtitle")}
+            Une sélection de mes projets professionnels, alliant expertise technique et gestion de projet.
           </p>
         </div>
 
         {/* Filtres par technologies */}
         <div className="mb-12">
-          <h3 className="text-lg font-semibold text-foreground mb-4 text-center">{t("projects.filterBy")}</h3>
+          <h3 className="text-lg font-semibold text-foreground mb-4 text-center">Filtrer par technologie</h3>
           <div className="flex flex-wrap justify-center gap-2">
             <button
-              onClick={() => setSelectedTech(t("projects.all"))}
+              onClick={() => setSelectedTech("Tous")}
               className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
-                selectedTech === t("projects.all")
+                selectedTech === "Tous"
                   ? "bg-primary text-primary-foreground shadow-md"
                   : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
               }`}
             >
-              {t("projects.all")} ({projects.length})
+              Tous ({projects.length})
             </button>
             {allTechnologies.map((tech) => {
-              const count = projectsData.filter(project => project.technologies.includes(tech)).length
+              const count = projects.filter(project => project.technologies.includes(tech)).length
               return (
                 <button
                   key={tech}
@@ -174,12 +172,12 @@ export function ProjectsSection() {
                       <div className="flex gap-2">
                         {project.featured && (
                           <Badge variant="secondary" className="bg-primary/10 text-primary">
-                            {t("projects.featured")}
+                            Featured
                           </Badge>
                         )}
                         {project.personal && (
                           <Badge variant="outline" className="bg-green-50 text-green-700 border-green-200">
-                            {t("projects.personal")}
+                            Projet Personnel
                           </Badge>
                         )}
                       </div>
