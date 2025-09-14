@@ -11,6 +11,12 @@ export const metadata: Metadata = {
   title: "Portfolio - Développeur Full Stack",
   description: "Portfolio moderne d'un développeur full stack passionné par la création d'applications web innovantes",
   generator: "v0.app",
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon.svg", type: "image/svg+xml" }
+    ]
+  }
 }
 
 export default function RootLayout({
