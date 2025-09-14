@@ -11,8 +11,6 @@ const nextConfig = {
   },
   output: 'export',
   trailingSlash: true,
-  basePath: '/malaury-boudon-portfolio',
-  assetPrefix: '/malaury-boudon-portfolio/',
 }
 
 export default nextConfig
