@@ -13,7 +13,7 @@ export const HeroView = memo(function HeroView({
   translations
 }: HeroContainerProps) {
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20 sm:pt-0">
       {/* 3D Wireframe Background */}
       <div className="absolute inset-0 wireframe-bg animate-pulse-glow" />
 
@@ -24,7 +24,7 @@ export const HeroView = memo(function HeroView({
         style={{ animationDelay: "2s" }}
       />
 
-      <div className="relative z-10 max-w-6xl mx-auto px-6">
+      <div className="relative z-20 max-w-6xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left side - Photo */}
           <div className="order-2 lg:order-1 flex justify-center lg:justify-start">
@@ -48,8 +48,8 @@ export const HeroView = memo(function HeroView({
 
           {/* Right side - Content */}
           <div className="order-1 lg:order-2 text-center lg:text-left">
-            <div className="space-y-6">
-              <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-balance leading-tight">
+            <div className="space-y-4 sm:space-y-6">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-balance leading-tight drop-shadow-sm">
                 <span className="text-foreground">{translations.creative}</span>
                 <br />
                 <span className="text-muted-foreground">{translations.developer}</span>
@@ -59,9 +59,6 @@ export const HeroView = memo(function HeroView({
                 <p className="text-lg text-muted-foreground">{translations.name}</p>
               </div>
 
-              <div className="pt-4">
-                <p className="text-sm text-muted-foreground uppercase tracking-wider mb-4">// {translations.tagline}.</p>
-              </div>
             </div>
 
             <div className="mt-12 space-y-8">

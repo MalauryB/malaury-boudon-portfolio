@@ -65,30 +65,56 @@ const translations = {
       "Développement d'API REST Java/Spring Boot, encadrement technique de 3 développeurs et gouvernance de projets dans la grande distribution.",
 
     // Projects Section
-    "projects.title": "Projets Clés",
-    "projects.cts.title": "Application CTS - Web & Mobile",
+    "projects.title": "PROJETS",
+    "projects.subtitle": "Une sélection de mes projets professionnels, alliant expertise technique et gestion de projet.",
+    "projects.filterBy": "Filtrer par technologie",
+    "projects.all": "Tous",
+    "projects.featured": "Featured",
+    "projects.personal": "Projet Personnel",
+
+    // Individual Projects
+    "projects.cts.title": "CTS - Projet Web et Mobile",
     "projects.cts.desc":
-      "Développement d'une solution complète web et mobile pour la CTS avec gestion de projet Agile, développement Java/Angular et application mobile native Android.",
-    "projects.sentinel.title": "Sentinel MBO - Plateforme Web",
+      "Développement complet d'une solution web et mobile avec gestion de projet Agile/Scrum. Programmation en Java et Angular pour le web, développement natif Android et solutions cross-platform avec Flutter.",
+    "projects.sentinel.title": "Sentinel MBO - Projet Web Complet",
     "projects.sentinel.desc":
-      "Projet web complet avec développement full-stack (Java, React.js, PostgreSQL), conception UX/UI et mise en production sous Linux.",
+      "Projet full-stack avec gestion Agile/Scrum, rédaction de spécifications fonctionnelles et techniques. Développement avec React.js, Java et PostgreSQL, mise en production sous Linux.",
     "projects.roiret.title": "Roiret - Interface Utilisateur",
     "projects.roiret.desc":
-      "Intégration front-end React.js avec optimisation des performances, adaptation responsive et développement à partir de maquettes Figma.",
-    "projects.api.title": "API REST Grande Distribution",
-    "projects.api.desc":
-      "Développement d'API REST performantes pour le secteur de la grande distribution avec architecture microservices et intégration CI/CD.",
+      "Intégration front-end avec développement de l'interface utilisateur en React.js à partir de maquettes Figma. Optimisation des performances et adaptation responsive multi-appareils.",
+    "projects.adis.title": "Microservices Assurance - ADIS",
+    "projects.adis.desc":
+      "Développement et maintenance de microservices Java dans le secteur de l'assurance avec prise en compte des contraintes métier et réglementaires. Architecture API REST et intégration CI/CD.",
+    "projects.boulanger.title": "Agrégateur Boulanger",
+    "projects.boulanger.desc":
+      "Développement d'API REST dans le secteur de la grande distribution avec encadrement technique de 3 développeurs. Comparaison de systèmes d'information et migration réussie dans un délai réduit.",
+    "projects.wewioo.title": "Wewioo - Détection d'Incendie",
+    "projects.wewioo.desc":
+      "Projet React développé pour une startup innovante spécialisée dans la détection précoce d'incendies. Interface utilisateur moderne pour la surveillance et l'alerte en temps réel, contribuant à améliorer la sécurité et la prévention des risques d'incendie.",
+    "projects.therapist.title": "Site Web Thérapeute - Strasbourg",
+    "projects.therapist.desc":
+      "Projet personnel - Développement complet d'un site web pour un thérapeute à Strasbourg. Site vitrine moderne avec présentation des services, prise de rendez-vous et informations pratiques. Réalisé de manière indépendante.",
     "projects.viewProject": "Voir le projet",
 
     // Contact Section
-    "contact.title": "Contactez-moi",
-    "contact.subtitle": "Prête à collaborer sur votre prochain projet",
+    "contact.title": "CONTACT",
+    "contact.subtitle": "Travaillons ensemble sur votre prochain projet.",
+    "contact.heading": "Restons en contact",
     "contact.description":
-      "Que vous ayez un projet en tête ou que vous souhaitiez simplement discuter de développement, n'hésitez pas à me contacter.",
+      "Que vous ayez un projet en tête, une question technique ou simplement envie d'échanger sur le développement web, n'hésitez pas à me contacter.",
     "contact.phone": "Téléphone",
     "contact.email": "Email",
     "contact.location": "Localisation",
-    "contact.cta": "Commençons à collaborer",
+    "contact.follow": "Suivez-moi",
+    "contact.form.name": "Nom complet",
+    "contact.form.namePlaceholder": "Votre nom",
+    "contact.form.emailPlaceholder": "votre@email.com",
+    "contact.form.message": "Message",
+    "contact.form.messagePlaceholder": "Parlez-moi de votre projet...",
+    "contact.form.submit": "Envoyer le message",
+    "contact.form.submitting": "Envoi en cours...",
+    "contact.form.success": "Message envoyé avec succès! Je vous répondrai bientôt.",
+    "contact.form.error": "Une erreur est survenue. Veuillez réessayer.",
   },
   en: {
     // Navigation
@@ -144,30 +170,56 @@ const translations = {
       "Development of Java/Spring Boot REST APIs, technical leadership of 3 developers and project governance in retail distribution.",
 
     // Projects Section
-    "projects.title": "Key Projects",
-    "projects.cts.title": "CTS Application - Web & Mobile",
+    "projects.title": "PROJECTS",
+    "projects.subtitle": "A selection of my professional projects, combining technical expertise and project management.",
+    "projects.filterBy": "Filter by technology",
+    "projects.all": "All",
+    "projects.featured": "Featured",
+    "projects.personal": "Personal Project",
+
+    // Individual Projects
+    "projects.cts.title": "CTS - Web and Mobile Project",
     "projects.cts.desc":
-      "Development of a complete web and mobile solution for CTS with Agile project management, Java/Angular development and native Android mobile application.",
-    "projects.sentinel.title": "Sentinel MBO - Web Platform",
+      "Complete development of a web and mobile solution with Agile/Scrum project management. Java and Angular programming for web, native Android development and cross-platform solutions with Flutter.",
+    "projects.sentinel.title": "Sentinel MBO - Complete Web Project",
     "projects.sentinel.desc":
-      "Complete web project with full-stack development (Java, React.js, PostgreSQL), UX/UI design and Linux production deployment.",
+      "Full-stack project with Agile/Scrum management, functional and technical specifications writing. Development with React.js, Java and PostgreSQL, Linux production deployment.",
     "projects.roiret.title": "Roiret - User Interface",
     "projects.roiret.desc":
-      "React.js front-end integration with performance optimization, responsive adaptation and development from Figma mockups.",
-    "projects.api.title": "Retail Distribution REST API",
-    "projects.api.desc":
-      "Development of performant REST APIs for the retail sector with microservices architecture and CI/CD integration.",
+      "Front-end integration with user interface development in React.js from Figma mockups. Performance optimization and responsive multi-device adaptation.",
+    "projects.adis.title": "Insurance Microservices - ADIS",
+    "projects.adis.desc":
+      "Development and maintenance of Java microservices in the insurance sector with consideration of business and regulatory constraints. REST API architecture and CI/CD integration.",
+    "projects.boulanger.title": "Boulanger Aggregator",
+    "projects.boulanger.desc":
+      "REST API development in the retail sector with technical leadership of 3 developers. Information systems comparison and successful migration within reduced timeframe.",
+    "projects.wewioo.title": "Wewioo - Fire Detection",
+    "projects.wewioo.desc":
+      "React project developed for an innovative startup specialized in early fire detection. Modern user interface for real-time monitoring and alerts, contributing to improved safety and fire risk prevention.",
+    "projects.therapist.title": "Therapist Website - Strasbourg",
+    "projects.therapist.desc":
+      "Personal project - Complete development of a website for a therapist in Strasbourg. Modern showcase site with service presentation, appointment booking and practical information. Independently realized.",
     "projects.viewProject": "View project",
 
     // Contact Section
-    "contact.title": "Get In Touch",
-    "contact.subtitle": "Ready to collaborate on your next project",
+    "contact.title": "CONTACT",
+    "contact.subtitle": "Let's work together on your next project.",
+    "contact.heading": "Let's stay in touch",
     "contact.description":
-      "Whether you have a project in mind or just want to discuss development, feel free to reach out.",
+      "Whether you have a project in mind, a technical question, or just want to chat about web development, feel free to contact me.",
     "contact.phone": "Phone",
     "contact.email": "Email",
     "contact.location": "Location",
-    "contact.cta": "Let's start collaborating",
+    "contact.follow": "Follow me",
+    "contact.form.name": "Full name",
+    "contact.form.namePlaceholder": "Your name",
+    "contact.form.emailPlaceholder": "your@email.com",
+    "contact.form.message": "Message",
+    "contact.form.messagePlaceholder": "Tell me about your project...",
+    "contact.form.submit": "Send message",
+    "contact.form.submitting": "Sending...",
+    "contact.form.success": "Message sent successfully! I'll get back to you soon.",
+    "contact.form.error": "An error occurred. Please try again.",
   },
 }
 
