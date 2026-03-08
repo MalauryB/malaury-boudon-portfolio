@@ -54,6 +54,9 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+  verification: {
+    google: "pExcOnCIQKA7yTk4Y9nKr2NlBFGgCSYTxJt5Sft41oc",
+  },
   alternates: {
     canonical: "https://malaury.dev",
   },
