@@ -94,6 +94,12 @@ const translations = {
     "projects.therapist.title": "Site Web Thérapeute - Strasbourg",
     "projects.therapist.desc":
       "Projet personnel - Développement complet d'un site web pour un thérapeute à Strasbourg. Site vitrine moderne avec présentation des services, prise de rendez-vous et informations pratiques. Réalisé de manière indépendante.",
+    "projects.nimli.title": "Nimli - Agence de Développement",
+    "projects.nimli.desc":
+      "Projet personnel - Agence de développement informatique proposant des services numériques sur mesure : développement web et mobile, solutions d'intelligence artificielle et design UX/UI. Site vitrine moderne avec formulaire de contact et présentation des services.",
+    "projects.president.title": "Qui Sera Président ? - Simulateur Élection 2027",
+    "projects.president.desc":
+      "Projet personnel - Simulateur interactif de l'élection présidentielle française 2027. Modèle mathématique de calcul de probabilités, analyse des scénarios de second tour et profils des candidats sur l'ensemble du spectre politique.",
     "projects.viewProject": "Voir le projet",
 
     // Contact Section
@@ -199,6 +205,12 @@ const translations = {
     "projects.therapist.title": "Therapist Website - Strasbourg",
     "projects.therapist.desc":
       "Personal project - Complete development of a website for a therapist in Strasbourg. Modern showcase site with service presentation, appointment booking and practical information. Independently realized.",
+    "projects.nimli.title": "Nimli - Development Agency",
+    "projects.nimli.desc":
+      "Personal project - IT development agency offering custom digital services: web and mobile development, artificial intelligence solutions and UX/UI design. Modern showcase site with contact form and service presentation.",
+    "projects.president.title": "Who Will Be President? - 2027 Election Simulator",
+    "projects.president.desc":
+      "Personal project - Interactive simulator for the 2027 French presidential election. Mathematical probability model, second-round scenario analysis and candidate profiles across the full political spectrum.",
     "projects.viewProject": "View project",
 
     // Contact Section

@@ -76,6 +76,28 @@ const projectsData = [
     featured: false,
     personal: true,
   },
+  {
+    id: 8,
+    titleKey: "projects.nimli.title",
+    descKey: "projects.nimli.desc",
+    image: getAssetPath("/placeholder.svg"),
+    technologies: ["Next.js", "React", "Node.js", "Supabase", "Tailwind CSS"],
+    liveUrl: "https://nimli.fr",
+    githubUrl: "#",
+    featured: true,
+    personal: true,
+  },
+  {
+    id: 9,
+    titleKey: "projects.president.title",
+    descKey: "projects.president.desc",
+    image: getAssetPath("/placeholder.svg"),
+    technologies: ["Next.js", "React", "Supabase", "Tailwind CSS"],
+    liveUrl: "https://quiserapresident.fr",
+    githubUrl: "#",
+    featured: false,
+    personal: true,
+  },
 ]
 
 export function ProjectsSection() {
